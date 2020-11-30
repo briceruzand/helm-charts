@@ -10,7 +10,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.43.2
-    created: "2020-11-28T10:36:39.577782275Z"
+    created: "2020-11-30T19:44:39.824584549Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -28,7 +28,7 @@ entries:
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: a105d57fdb4a1a1e0f5e198a6311064a031553167f623ea8d3f2181867515451
+    digest: 13efc82847b2d5ef207bdb62790d730d4e461f6727c95fae8a8c6a32c9703e6c
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -53,6 +53,28 @@ entries:
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/kube-prometheus-stack-12.2.4/kube-prometheus-stack-12.2.4.tgz
-    version: 12.2.4
-generated: "2020-11-28T10:36:39.44352105Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/kube-prometheus-stack-12.3.0/kube-prometheus-stack-12.3.0.tgz
+    version: 12.3.0
+  prometheus-postgres-exporter:
+  - apiVersion: v1
+    appVersion: 0.8.0
+    created: "2020-11-30T19:44:39.95690677Z"
+    description: A Helm chart for prometheus postgres-exporter
+    digest: 5ad5333f23fd507f1ac987ede98cc30a9e527c75dfe5c26e7f0576fc144893bc
+    home: https://github.com/wrouesnel/postgres_exporter
+    keywords:
+    - postgresql
+    - prometheus
+    - exporter
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    name: prometheus-postgres-exporter
+    sources:
+    - https://github.com/wrouesnel/postgres_exporter
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-postgres-exporter-1.5.0/prometheus-postgres-exporter-1.5.0.tgz
+    version: 1.5.0
+generated: "2020-11-30T19:44:39.694465856Z"
