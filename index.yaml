@@ -1,80 +1,23 @@
 apiVersion: v1
 entries:
-  kube-prometheus-stack:
-  - annotations:
-      artifacthub.io/links: |
-        - name: Chart Source
-          url: https://github.com/prometheus-community/helm-charts
-        - name: Upstream Project
-          url: https://github.com/prometheus-operator/kube-prometheus
-      artifacthub.io/operator: "true"
-    apiVersion: v2
-    appVersion: 0.43.2
-    created: "2020-11-30T19:44:39.824584549Z"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://charts.helm.sh/stable
-      version: 2.9.*
-    - condition: nodeExporter.enabled
-      name: prometheus-node-exporter
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 1.12.*
-    - condition: grafana.enabled
-      name: grafana
-      repository: https://grafana.github.io/helm-charts
-      version: 5.8.*
-    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
-      and Prometheus rules combined with documentation and scripts to provide easy
-      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
-      Prometheus Operator.
-    digest: 13efc82847b2d5ef207bdb62790d730d4e461f6727c95fae8a8c6a32c9703e6c
-    home: https://github.com/prometheus-operator/kube-prometheus
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+  prometheus-consul-exporter:
+  - apiVersion: v1
+    appVersion: 0.4.0
+    created: "2020-12-02T12:45:01.588103681Z"
+    description: A Helm chart for the Prometheus Consul Exporter
+    digest: 265a64cbd0980a44899a7b242beb35fb2deba9eb49f6d0429fb18936f30509e2
+    home: https://github.com/prometheus/consul_exporter
     keywords:
-    - operator
-    - prometheus
-    - kube-prometheus
-    kubeVersion: '>=1.16.0-0'
+    - metrics
+    - consul
+    - monitoring
     maintainers:
-    - name: vsliouniaev
-    - name: bismarck
-    - email: gianrubio@gmail.com
-      name: gianrubio
+    - email: 8890118+timm088@users.noreply.github.com
+      name: timm088
     - email: github.gkarthiks@gmail.com
       name: gkarthiks
-    - email: scott@r6by.com
-      name: scottrigby
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
-    name: kube-prometheus-stack
-    sources:
-    - https://github.com/prometheus-community/helm-charts
-    - https://github.com/prometheus-operator/kube-prometheus
-    type: application
+    name: prometheus-consul-exporter
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/kube-prometheus-stack-12.3.0/kube-prometheus-stack-12.3.0.tgz
-    version: 12.3.0
-  prometheus-postgres-exporter:
-  - apiVersion: v1
-    appVersion: 0.8.0
-    created: "2020-11-30T19:44:39.95690677Z"
-    description: A Helm chart for prometheus postgres-exporter
-    digest: 5ad5333f23fd507f1ac987ede98cc30a9e527c75dfe5c26e7f0576fc144893bc
-    home: https://github.com/wrouesnel/postgres_exporter
-    keywords:
-    - postgresql
-    - prometheus
-    - exporter
-    maintainers:
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    name: prometheus-postgres-exporter
-    sources:
-    - https://github.com/wrouesnel/postgres_exporter
-    urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-postgres-exporter-1.5.0/prometheus-postgres-exporter-1.5.0.tgz
-    version: 1.5.0
-generated: "2020-11-30T19:44:39.694465856Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-consul-exporter-0.4.0/prometheus-consul-exporter-0.4.0.tgz
+    version: 0.4.0
+generated: "2020-12-02T12:45:01.351062331Z"
