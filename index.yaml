@@ -1,62 +1,28 @@
 apiVersion: v1
 entries:
-  prometheus:
-  - apiVersion: v2
-    appVersion: 2.22.1
-    created: "2020-12-08T22:24:26.640500268Z"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://charts.helm.sh/stable/
-      version: 2.8.*
-    description: Prometheus is a monitoring system and time series database.
-    digest: 7a0a81d9ba2fcef2f080b397917e80571b9a8cb6f2d914cdfcc0eedaec92ce97
-    home: https://prometheus.io/
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
-    maintainers:
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
-    - email: monotek23@gmail.com
-      name: monotek
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: prometheus
-    sources:
-    - https://github.com/prometheus/alertmanager
-    - https://github.com/prometheus/prometheus
-    - https://github.com/prometheus/pushgateway
-    - https://github.com/prometheus/node_exporter
-    - https://github.com/kubernetes/kube-state-metrics
-    type: application
-    urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-13.0.0/prometheus-13.0.0.tgz
-    version: 13.0.0
-  prometheus-statsd-exporter:
-  - annotations:
-      artifacthub.io/links: |
-        - name: Chart Source
-          url: https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus-statsd-exporter
-    apiVersion: v2
-    appVersion: 0.18.0
-    created: "2020-12-08T22:24:26.749695642Z"
-    description: A Helm chart for prometheus stats-exporter
-    digest: cd8471e84b6446774b838acd51f7e123bdf8306e5ee6bca841ba82d9e8840387
-    home: https://github.com/prometheus/statsd_exporter
+  prometheus-elasticsearch-exporter:
+  - apiVersion: v1
+    appVersion: 1.1.0
+    created: "2020-12-10T11:48:11.981763419Z"
+    description: Elasticsearch stats exporter for Prometheus
+    digest: e7e5faa93534c2110e1d6724118833ecf8c97718ecb2ed857f05b6af4479c20b
+    home: https://github.com/justwatchcom/elasticsearch_exporter
     keywords:
-    - statsd
-    - prometheus
-    - exporter
+    - metrics
+    - elasticsearch
+    - monitoring
+    kubeVersion: '>=1.10.0-0'
     maintainers:
-    - email: d@rovergulf.net
-      name: scDisorder
-    name: prometheus-statsd-exporter
+    - email: sven.mueller@commercetools.com
+      name: svenmueller
+    - email: carlos@carlosbecker.com
+      name: caarlos0
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: prometheus-elasticsearch-exporter
     sources:
-    - https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus-statsd-exporter
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-elasticsearch-exporter
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-statsd-exporter-0.1.0/prometheus-statsd-exporter-0.1.0.tgz
-    version: 0.1.0
-generated: "2020-12-08T22:24:26.497410678Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-elasticsearch-exporter-4.0.1/prometheus-elasticsearch-exporter-4.0.1.tgz
+    version: 4.0.1
+generated: "2020-12-10T11:48:11.451255742Z"
