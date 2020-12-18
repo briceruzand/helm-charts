@@ -1,28 +1,24 @@
 apiVersion: v1
 entries:
-  prometheus-adapter:
+  prometheus-pushgateway:
   - apiVersion: v1
-    appVersion: v0.8.2
-    created: "2020-12-15T16:01:01.45731899Z"
-    description: A Helm chart for k8s prometheus adapter
-    digest: 72dd4b3172df1cddf3b6b9c2241b0fbba33ee3a910d800fea6d44ef386acc852
-    home: https://github.com/DirectXMan12/k8s-prometheus-adapter
+    appVersion: 1.3.0
+    created: "2020-12-18T19:55:57.645640605Z"
+    description: A Helm chart for prometheus pushgateway
+    digest: b039d25144bcbac8fa6df8fc8eaeca2b1325a19c3e6679516a9b48ac1d64a768
+    home: https://github.com/prometheus/pushgateway
     keywords:
-    - hpa
-    - metrics
+    - pushgateway
     - prometheus
-    - adapter
     maintainers:
-    - email: mattias.gees@jetstack.io
-      name: mattiasgees
-    - name: steven-sheehy
-    - email: hfernandez@mesosphere.com
-      name: hectorj2f
-    name: prometheus-adapter
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: christian.staude@staffbase.com
+      name: cstaud
+    name: prometheus-pushgateway
     sources:
-    - https://github.com/kubernetes/charts
-    - https://github.com/DirectXMan12/k8s-prometheus-adapter
+    - https://github.com/prometheus/pushgateway
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-adapter-2.10.1/prometheus-adapter-2.10.1.tgz
-    version: 2.10.1
-generated: "2020-12-15T16:01:01.222995575Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-pushgateway-1.5.1/prometheus-pushgateway-1.5.1.tgz
+    version: 1.5.1
+generated: "2020-12-18T19:55:57.516682996Z"
