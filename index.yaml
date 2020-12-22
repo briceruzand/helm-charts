@@ -1,28 +1,38 @@
 apiVersion: v1
 entries:
-  prometheus-cloudwatch-exporter:
-  - apiVersion: v1
-    appVersion: 0.8.0
-    created: "2020-12-20T23:51:41.90516023Z"
-    description: A Helm chart for prometheus cloudwatch-exporter
-    digest: 5692c658eeed493ed745771820e454fcb00a32afda1d18f4ec66a993092ca0de
-    home: https://github.com/prometheus/cloudwatch_exporter
-    keywords:
-    - aws
-    - cloudwatch
-    - prometheus
-    - exporter
+  prometheus:
+  - apiVersion: v2
+    appVersion: 2.22.1
+    created: "2020-12-22T06:47:24.035336323Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://charts.helm.sh/stable/
+      version: 2.8.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: 75b2b6c2af731357bffff01d85b4d6dc3429a6bf0d547aa98dadc6fdc20607a7
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     maintainers:
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: mail@torstenwalter.de
-      name: torstenwalter
-    - email: asher@asherfoa.com
-      name: asherf
-    name: prometheus-cloudwatch-exporter
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
     sources:
-    - https://github.com/prometheus/cloudwatch_exporter
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    type: application
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-cloudwatch-exporter-0.12.1/prometheus-cloudwatch-exporter-0.12.1.tgz
-    version: 0.12.1
-generated: "2020-12-20T23:51:41.787752084Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-13.0.1/prometheus-13.0.1.tgz
+    version: 13.0.1
+generated: "2020-12-22T06:47:23.910013047Z"
