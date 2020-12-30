@@ -1,60 +1,58 @@
 apiVersion: v1
 entries:
-  prometheus:
-  - apiVersion: v2
-    appVersion: 2.22.1
-    created: "2020-12-29T15:56:00.525206365Z"
+  kube-prometheus-stack:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: 0.44.0
+    created: "2020-12-30T23:07:32.895703722Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
-      repository: https://charts.helm.sh/stable/
-      version: 2.8.*
-    description: Prometheus is a monitoring system and time series database.
-    digest: 3d12f90c138ef5663479980eb97b4c90bd4e161bf1ec03779ba36bdba2f1bc0a
-    home: https://prometheus.io/
+      repository: https://charts.helm.sh/stable
+      version: 2.9.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 1.12.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 5.8.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: 38816f95a26f4e8f6b9a8543b0b985b65103f12ab9dc46a56648352efaa214dd
+    home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
     maintainers:
+    - name: vsliouniaev
+    - name: bismarck
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: zanhsieh@gmail.com
-      name: zanhsieh
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: scott@r6by.com
+      name: scottrigby
     - email: miroslav.hadzhiev@gmail.com
       name: Xtigyro
-    - email: monotek23@gmail.com
-      name: monotek
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: prometheus
+    name: kube-prometheus-stack
     sources:
-    - https://github.com/prometheus/alertmanager
-    - https://github.com/prometheus/prometheus
-    - https://github.com/prometheus/pushgateway
-    - https://github.com/prometheus/node_exporter
-    - https://github.com/kubernetes/kube-state-metrics
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-13.0.2/prometheus-13.0.2.tgz
-    version: 13.0.2
-  prometheus-stackdriver-exporter:
-  - apiVersion: v1
-    appVersion: 0.6.0
-    created: "2020-12-29T15:56:00.642646839Z"
-    description: Stackdriver exporter for Prometheus
-    digest: 99e1a93fae326a4cbbb87013cd0e04166a332f8414a835399889e5480954dab3
-    home: https://www.stackdriver.com/
-    keywords:
-    - metrics
-    - stackdriver
-    - monitoring
-    maintainers:
-    - email: apenney@gmail.com
-      name: apenney
-    - email: pahli88@googlemail.com
-      name: rpahli
-    name: prometheus-stackdriver-exporter
-    sources:
-    - https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-stackdriver_exporter
-    urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-stackdriver-exporter-1.6.0/prometheus-stackdriver-exporter-1.6.0.tgz
-    version: 1.6.0
-generated: "2020-12-29T15:56:00.366562781Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/kube-prometheus-stack-12.9.0/kube-prometheus-stack-12.9.0.tgz
+    version: 12.9.0
+generated: "2020-12-30T23:07:32.765335708Z"
