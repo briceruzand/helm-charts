@@ -10,7 +10,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.44.0
-    created: "2021-01-01T23:40:05.054278606Z"
+    created: "2021-01-04T20:39:57.045729245Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -23,12 +23,12 @@ entries:
     - condition: grafana.enabled
       name: grafana
       repository: https://grafana.github.io/helm-charts
-      version: 5.8.*
+      version: 6.1.*
     description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: aa1d1d9ff7847db68ee5772c15419255e2a3066e4f206aae262676e9b37c0d9e
+    digest: 6671a71aa0361edfb75bd73a0b8c5f446bea576a76dd8c3a660b707c3b497297
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -53,6 +53,6 @@ entries:
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/kube-prometheus-stack-12.9.2/kube-prometheus-stack-12.9.2.tgz
-    version: 12.9.2
-generated: "2021-01-01T23:40:04.934739043Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/kube-prometheus-stack-12.10.3/kube-prometheus-stack-12.10.3.tgz
+    version: 12.10.3
+generated: "2021-01-04T20:39:56.909842593Z"
