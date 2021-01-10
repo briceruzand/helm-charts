@@ -10,7 +10,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.44.0
-    created: "2021-01-10T17:39:57.657178107Z"
+    created: "2021-01-10T23:39:55.247311227Z"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -28,7 +28,7 @@ entries:
       and Prometheus rules combined with documentation and scripts to provide easy
       to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
       Prometheus Operator.
-    digest: ba39880df0c3afb3d5aaf074cba76fd5a36e3156c1e3660dc3bdd9b009383a30
+    digest: a8e961e54283e9773cb5f4cc598c4e0b96ed4aea141bf594630477b83e8fa26f
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
@@ -53,6 +53,6 @@ entries:
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/kube-prometheus-stack-12.11.2/kube-prometheus-stack-12.11.2.tgz
-    version: 12.11.2
-generated: "2021-01-10T17:39:57.528563835Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/kube-prometheus-stack-12.11.3/kube-prometheus-stack-12.11.3.tgz
+    version: 12.11.3
+generated: "2021-01-10T23:39:55.108066674Z"
