@@ -1,28 +1,93 @@
 apiVersion: v1
 entries:
-  prometheus-cloudwatch-exporter:
-  - apiVersion: v1
-    appVersion: 0.8.0
-    created: "2021-01-14T15:27:37.720704336Z"
-    description: A Helm chart for prometheus cloudwatch-exporter
-    digest: 22fb4daeb1ba3c7423046964b29551a03e718baca3024b75358ed5a5907acaa5
-    home: https://github.com/prometheus/cloudwatch_exporter
+  kube-prometheus-stack:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: 0.44.0
+    created: "2021-01-14T19:07:41.708431645Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes.github.io/kube-state-metrics
+      version: 2.9.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 1.12.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.1.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: 8e3fe05189f7ab265b137e42c367ac37c0490bfcad0193110fd698a7dd7ea673
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
-    - aws
-    - cloudwatch
+    - operator
     - prometheus
-    - exporter
+    - kube-prometheus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - name: vsliouniaev
+    - name: bismarck
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    name: kube-prometheus-stack
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/kube-prometheus-stack-12.12.1/kube-prometheus-stack-12.12.1.tgz
+    version: 12.12.1
+  prometheus:
+  - apiVersion: v2
+    appVersion: 2.24.0
+    created: "2021-01-14T19:07:41.876019709Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes.github.io/kube-state-metrics
+      version: 2.9.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: abb184fba19bff0be0107511d5a326c76de208df057ca13598bd7519e80f3b6f
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     maintainers:
     - email: gianrubio@gmail.com
       name: gianrubio
-    - email: mail@torstenwalter.de
-      name: torstenwalter
-    - email: asher@asherfoa.com
-      name: asherf
-    name: prometheus-cloudwatch-exporter
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: prometheus
     sources:
-    - https://github.com/prometheus/cloudwatch_exporter
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    type: application
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-cloudwatch-exporter-0.13.0/prometheus-cloudwatch-exporter-0.13.0.tgz
-    version: 0.13.0
-generated: "2021-01-14T15:27:37.571015812Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-13.2.1/prometheus-13.2.1.tgz
+    version: 13.2.1
+generated: "2021-01-14T19:07:41.523730625Z"
