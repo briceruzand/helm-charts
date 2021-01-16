@@ -1,37 +1,36 @@
 apiVersion: v1
 entries:
-  prometheus-blackbox-exporter:
+  prometheus-adapter:
   - apiVersion: v1
-    appVersion: 0.18.0
-    created: "2021-01-15T17:53:39.265878928Z"
-    description: Prometheus Blackbox Exporter
-    digest: 9cf8e5ee540df5067a959d4b9e07c93da18b27fcc71ba72094abf9cb53b05b01
-    home: https://github.com/prometheus/blackbox_exporter
+    appVersion: v0.8.2
+    created: "2021-01-16T11:39:47.340709542Z"
+    description: A Helm chart for k8s prometheus adapter
+    digest: 79e169c5375716d5acb8b8d7f0002bd773ea9ebda8f66e82385bffaee6976b66
+    home: https://github.com/DirectXMan12/k8s-prometheus-adapter
     keywords:
+    - hpa
+    - metrics
     - prometheus
-    - blackbox
-    - monitoring
+    - adapter
     maintainers:
-    - email: cedric@desaintmartin.fr
-      name: desaintmartin
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: me@sota.sh
-      name: rsotnychenko
-    - email: monotek23@gmail.com
-      name: monotek
-    name: prometheus-blackbox-exporter
+    - email: mattias.gees@jetstack.io
+      name: mattiasgees
+    - name: steven-sheehy
+    - email: hfernandez@mesosphere.com
+      name: hectorj2f
+    name: prometheus-adapter
     sources:
-    - https://github.com/prometheus/blackbox_exporter
+    - https://github.com/kubernetes/charts
+    - https://github.com/DirectXMan12/k8s-prometheus-adapter
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-blackbox-exporter-4.10.2/prometheus-blackbox-exporter-4.10.2.tgz
-    version: 4.10.2
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-adapter-2.11.0/prometheus-adapter-2.11.0.tgz
+    version: 2.11.0
   prometheus-rabbitmq-exporter:
   - apiVersion: v1
     appVersion: v0.29.0
-    created: "2021-01-15T17:53:39.405779843Z"
+    created: "2021-01-16T11:39:47.497634995Z"
     description: Rabbitmq metrics exporter for prometheus
-    digest: cc506769750abb5abe4f2ca569322e9e5ca16c5dc5af7086f3429c61c988f9a2
+    digest: 8b2710cc8776325cc390d08c9a31ad701bc96705db80673840b4846b83357350
     home: https://github.com/kbudde/rabbitmq_exporter
     maintainers:
     - email: cedric@desaintmartin.fr
@@ -46,6 +45,6 @@ entries:
     sources:
     - https://github.com/kbudde/rabbitmq_exporter
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-rabbitmq-exporter-0.5.8/prometheus-rabbitmq-exporter-0.5.8.tgz
-    version: 0.5.8
-generated: "2021-01-15T17:53:39.117220206Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-rabbitmq-exporter-0.6.0/prometheus-rabbitmq-exporter-0.6.0.tgz
+    version: 0.6.0
+generated: "2021-01-16T11:39:47.202885196Z"
