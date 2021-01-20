@@ -1,58 +1,20 @@
 apiVersion: v1
 entries:
-  kube-prometheus-stack:
-  - annotations:
-      artifacthub.io/links: |
-        - name: Chart Source
-          url: https://github.com/prometheus-community/helm-charts
-        - name: Upstream Project
-          url: https://github.com/prometheus-operator/kube-prometheus
-      artifacthub.io/operator: "true"
-    apiVersion: v2
-    appVersion: 0.45.0
-    created: "2021-01-19T22:04:52.252818932Z"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://kubernetes.github.io/kube-state-metrics
-      version: 2.9.*
-    - condition: nodeExporter.enabled
-      name: prometheus-node-exporter
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 1.12.*
-    - condition: grafana.enabled
-      name: grafana
-      repository: https://grafana.github.io/helm-charts
-      version: 6.1.*
-    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
-      and Prometheus rules combined with documentation and scripts to provide easy
-      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
-      Prometheus Operator.
-    digest: 976cbe5642d4ae6cb801c52411ec5ac04b7c37abe0a282e81d68687bb6b8e32e
-    home: https://github.com/prometheus-operator/kube-prometheus
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+  prometheus-to-sd:
+  - apiVersion: v1
+    appVersion: 0.5.2
+    created: "2021-01-20T08:39:45.818035268Z"
+    description: Scrape metrics stored in prometheus format and push them to the Stackdriver
+    digest: 692c980bf8779b345e85cf408bf37e1d616f72b9532c84ea53eb898962967b2f
+    home: https://github.com/GoogleCloudPlatform/k8s-stackdriver/tree/master/prometheus-to-sd
     keywords:
-    - operator
     - prometheus
-    - kube-prometheus
-    kubeVersion: '>=1.16.0-0'
+    - stackdriver
     maintainers:
-    - name: vsliouniaev
-    - name: bismarck
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: github.gkarthiks@gmail.com
-      name: gkarthiks
-    - email: scott@r6by.com
-      name: scottrigby
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
-    name: kube-prometheus-stack
-    sources:
-    - https://github.com/prometheus-community/helm-charts
-    - https://github.com/prometheus-operator/kube-prometheus
-    type: application
+    - email: arcadie.condrat@gmail.com
+      name: acondrat
+    name: prometheus-to-sd
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/kube-prometheus-stack-13.0.2/kube-prometheus-stack-13.0.2.tgz
-    version: 13.0.2
-generated: "2021-01-19T22:04:52.094704817Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-to-sd-0.4.0/prometheus-to-sd-0.4.0.tgz
+    version: 0.4.0
+generated: "2021-01-20T08:39:45.666721937Z"
