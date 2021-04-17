@@ -1,38 +1,26 @@
 apiVersion: v1
 entries:
-  prometheus:
+  prometheus-postgres-exporter:
   - apiVersion: v2
-    appVersion: 2.26.0
-    created: "2021-04-16T15:14:42.026293354Z"
-    dependencies:
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://kubernetes.github.io/kube-state-metrics
-      version: 2.13.*
-    description: Prometheus is a monitoring system and time series database.
-    digest: 52b589d9edd5522115dc56e70880de3d6847e5c353567a8df903afa98ef07900
-    home: https://prometheus.io/
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    appVersion: 0.9.0
+    created: "2021-04-17T03:14:41.185176913Z"
+    description: A Helm chart for prometheus postgres-exporter
+    digest: 5c8ebd75e80c06a3c270067b79014aadce8d04d71e38681b2c580dd3e3a8fd6c
+    home: https://github.com/prometheus-community/postgres_exporter
+    keywords:
+    - postgresql
+    - prometheus
+    - exporter
     maintainers:
     - email: gianrubio@gmail.com
       name: gianrubio
     - email: zanhsieh@gmail.com
       name: zanhsieh
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
-    - email: monotek23@gmail.com
-      name: monotek
-    - email: naseem@transit.app
-      name: naseemkullah
-    name: prometheus
+    name: prometheus-postgres-exporter
     sources:
-    - https://github.com/prometheus/alertmanager
-    - https://github.com/prometheus/prometheus
-    - https://github.com/prometheus/pushgateway
-    - https://github.com/prometheus/node_exporter
-    - https://github.com/kubernetes/kube-state-metrics
+    - https://github.com/prometheus-community/postgres_exporter
     type: application
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-13.8.0/prometheus-13.8.0.tgz
-    version: 13.8.0
-generated: "2021-04-16T15:14:41.809931219Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-postgres-exporter-2.3.0/prometheus-postgres-exporter-2.3.0.tgz
+    version: 2.3.0
+generated: "2021-04-17T03:14:41.066140088Z"
