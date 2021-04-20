@@ -1,26 +1,51 @@
 apiVersion: v1
 entries:
-  prometheus-postgres-exporter:
-  - apiVersion: v2
-    appVersion: 0.9.0
-    created: "2021-04-17T03:14:41.185176913Z"
-    description: A Helm chart for prometheus postgres-exporter
-    digest: 5c8ebd75e80c06a3c270067b79014aadce8d04d71e38681b2c580dd3e3a8fd6c
-    home: https://github.com/prometheus-community/postgres_exporter
+  prometheus-blackbox-exporter:
+  - apiVersion: v1
+    appVersion: 0.18.0
+    created: "2021-04-20T09:17:13.384208719Z"
+    description: Prometheus Blackbox Exporter
+    digest: f5b76fbfc4731fccc9bb527aac2b68c505838065919f605bf4c0c74179b02c3d
+    home: https://github.com/prometheus/blackbox_exporter
     keywords:
-    - postgresql
     - prometheus
-    - exporter
+    - blackbox
+    - monitoring
     maintainers:
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
     - email: gianrubio@gmail.com
       name: gianrubio
+    - email: me@sota.sh
+      name: rsotnychenko
+    - email: monotek23@gmail.com
+      name: monotek
+    name: prometheus-blackbox-exporter
+    sources:
+    - https://github.com/prometheus/blackbox_exporter
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-blackbox-exporter-4.11.0/prometheus-blackbox-exporter-4.11.0.tgz
+    version: 4.11.0
+  prometheus-redis-exporter:
+  - apiVersion: v2
+    appVersion: 1.11.1
+    created: "2021-04-20T09:17:13.487054626Z"
+    description: Prometheus exporter for Redis metrics
+    digest: cb0f6f67fd6800cae422ec6fa715cc381f620fe377610b005ee42694b742e34a
+    home: https://github.com/oliver006/redis_exporter
+    keywords:
+    - prometheus
+    - redis
+    maintainers:
+    - email: arcadie.condrat@gmail.com
+      name: acondrat
     - email: zanhsieh@gmail.com
       name: zanhsieh
-    name: prometheus-postgres-exporter
+    name: prometheus-redis-exporter
     sources:
-    - https://github.com/prometheus-community/postgres_exporter
+    - https://github.com/oliver006/redis_exporter
     type: application
     urls:
-    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-postgres-exporter-2.3.0/prometheus-postgres-exporter-2.3.0.tgz
-    version: 2.3.0
-generated: "2021-04-17T03:14:41.066140088Z"
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-redis-exporter-4.0.2/prometheus-redis-exporter-4.0.2.tgz
+    version: 4.0.2
+generated: "2021-04-20T09:17:13.25458641Z"
