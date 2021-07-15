@@ -63,6 +63,10 @@ spec:
       {{- if .Values.priorityClassName }}
       priorityClassName: "{{ .Values.priorityClassName }}"
       {{- end }}
+      {{- if .Values.extraInitContainers }}
+      initContainers:
+{{ toYaml .Values.extraInitContainers | indent 8 }}
+      {{- end }}
       containers:
         - name: blackbox-exporter
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -78,7 +82,11 @@ spec:
           {{- end }}
           args:
 {{- if (or .Values.config .Values.configExistingSecretName) }}
+   {{- if .Values.configPath }}
+            - "--config.file={{ .Values.configPath }}"
+   {{- else }}
             - "--config.file=/config/blackbox.yaml"
+   {{- end }}
 {{- else }}
             - "--config.file=/etc/blackbox_exporter/config.yml"
 {{- end }}

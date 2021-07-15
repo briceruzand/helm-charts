@@ -10,6 +10,7 @@ metadata:
   namespace: {{ .Release.Namespace }}
 spec:
   replicas: {{ .Values.replicas }}
+  strategy: {{ toYaml .Values.strategy | nindent 4 }}
   selector:
     matchLabels:
       app: {{ template "k8s-prometheus-adapter.name" . }}
@@ -67,12 +68,14 @@ spec:
             port: https
             scheme: HTTPS
           initialDelaySeconds: 30
+          timeoutSeconds: 5
         readinessProbe:
           httpGet:
             path: /healthz
             port: https
             scheme: HTTPS
           initialDelaySeconds: 30
+          timeoutSeconds: 5
         {{- if .Values.resources }}
         resources:
           {{- toYaml .Values.resources | nindent 10 }}
