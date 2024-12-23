@@ -673,6 +673,28 @@ entries:
   prometheus-mongodb-exporter:
   - apiVersion: v2
     appVersion: 0.43.1
+    created: "2024-12-23T21:25:44.353986311Z"
+    description: A Prometheus exporter for MongoDB metrics
+    digest: 55127e368b024e3873f6c964293669c9de332a86027c53044ba25c012459efde
+    home: https://github.com/percona/mongodb_exporter
+    keywords:
+    - exporter
+    - metrics
+    - mongodb
+    - prometheus
+    maintainers:
+    - email: ssheehy@firescope.com
+      name: steven-sheehy
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: prometheus-mongodb-exporter
+    sources:
+    - https://github.com/percona/mongodb_exporter
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-mongodb-exporter-3.11.0/prometheus-mongodb-exporter-3.11.0.tgz
+    version: 3.11.0
+  - apiVersion: v2
+    appVersion: 0.43.1
     created: "2024-12-23T09:27:51.260038468Z"
     description: A Prometheus exporter for MongoDB metrics
     digest: e7eb3102e794d922aec0039112b15965bc141617f490ed85eecd6d2bed891ed8
@@ -983,6 +1005,30 @@ entries:
   prometheus-postgres-exporter:
   - apiVersion: v2
     appVersion: v0.16.0
+    created: "2024-12-23T21:25:44.446337793Z"
+    description: A Helm chart for prometheus postgres-exporter
+    digest: 02eff36c9f0eb3a54003b226eec653a5193fa54b784214723c12a6dd6792b562
+    home: https://github.com/prometheus-community/postgres_exporter
+    keywords:
+    - postgresql
+    - prometheus
+    - exporter
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: prometheus-postgres-exporter
+    sources:
+    - https://github.com/prometheus-community/postgres_exporter
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-postgres-exporter-6.8.1/prometheus-postgres-exporter-6.8.1.tgz
+    version: 6.8.1
+  - apiVersion: v2
+    appVersion: v0.16.0
     created: "2024-12-23T09:27:53.322014004Z"
     description: A Helm chart for prometheus postgres-exporter
     digest: 71f8ee7a6e7e8cdc5f70368b81d96e21b8941fe1978172ea6d694ec5693e1bab
@@ -1246,4 +1292,4 @@ entries:
     urls:
     - https://github.com/briceruzand/helm-charts/releases/download/prometheus-windows-exporter-0.7.1/prometheus-windows-exporter-0.7.1.tgz
     version: 0.7.1
-generated: "2024-12-23T09:27:55.621385526Z"
+generated: "2024-12-23T21:25:44.446368391Z"
