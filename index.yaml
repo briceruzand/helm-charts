@@ -854,6 +854,36 @@ entries:
         - name: Upstream Project
           url: https://github.com/prometheus-operator/prometheus-operator
     apiVersion: v2
+    appVersion: 0.79.2
+    created: "2024-12-24T16:32:08.682219129Z"
+    description: Prometheus Operator Admission Webhook
+    digest: bc605219fe1cbd649acc8c000365b8a074ef22dc0d6c58ca98b843998a511539
+    home: https://github.com/prometheus-operator/prometheus-operator
+    icon: https://github.com/prometheus-operator/prometheus-operator/raw/main/Documentation/logos/prometheus-operator-logo.png
+    keywords:
+    - admission
+    - monitoring
+    - prometheus-operator
+    - webhook
+    maintainers:
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: prometheus-operator-admission-webhook
+    sources:
+    - https://github.com/prometheus-operator/prometheus-operator
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-operator-admission-webhook
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-operator-admission-webhook-0.18.1/prometheus-operator-admission-webhook-0.18.1.tgz
+    version: 0.18.1
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/prometheus-operator
+    apiVersion: v2
     appVersion: 0.79.0
     created: "2024-12-23T09:27:52.311812785Z"
     description: Prometheus Operator Admission Webhook
@@ -1126,6 +1156,23 @@ entries:
     version: 6.8.0
   prometheus-smartctl-exporter:
   - apiVersion: v2
+    appVersion: v0.13.0
+    created: "2024-12-24T16:32:08.793082805Z"
+    description: A Helm chart for Kubernetes
+    digest: 81b15934cf59abd35b44ec10d2decdda43aeb45e1c8e8735ad21caef32b63714
+    home: https://github.com/prometheus-community/smartctl_exporter
+    maintainers:
+    - name: kfox1111
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+    name: prometheus-smartctl-exporter
+    sources:
+    - https://github.com/prometheus-community/smartctl_exporter
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-smartctl-exporter-0.12.0/prometheus-smartctl-exporter-0.12.0.tgz
+    version: 0.12.0
+  - apiVersion: v2
     appVersion: v0.12.0
     created: "2024-12-23T09:27:54.249374331Z"
     description: A Helm chart for Kubernetes
@@ -1292,4 +1339,4 @@ entries:
     urls:
     - https://github.com/briceruzand/helm-charts/releases/download/prometheus-windows-exporter-0.7.1/prometheus-windows-exporter-0.7.1.tgz
     version: 0.7.1
-generated: "2024-12-23T21:25:44.446368391Z"
+generated: "2024-12-24T16:32:08.793117459Z"
