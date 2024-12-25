@@ -227,6 +227,36 @@ entries:
           url: https://github.com/prometheus-community/helm-charts
     apiVersion: v2
     appVersion: 2.14.0
+    created: "2024-12-25T03:25:43.795000556Z"
+    description: Install kube-state-metrics to generate and expose cluster-level metrics
+    digest: 45028c3198c91df6314ceeada92d8a804be3e84a56ec1db2c2651bd926d08d54
+    home: https://github.com/kubernetes/kube-state-metrics/
+    keywords:
+    - metric
+    - monitoring
+    - prometheus
+    - kubernetes
+    maintainers:
+    - email: tariq.ibrahim@mulesoft.com
+      name: tariq1890
+    - email: manuel@rueg.eu
+      name: mrueg
+    - email: david@0xdc.me
+      name: dotdc
+    name: kube-state-metrics
+    sources:
+    - https://github.com/kubernetes/kube-state-metrics/
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/kube-state-metrics-5.27.1/kube-state-metrics-5.27.1.tgz
+    version: 5.27.1
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+    apiVersion: v2
+    appVersion: 2.14.0
     created: "2024-12-23T09:27:48.019272069Z"
     description: Install kube-state-metrics to generate and expose cluster-level metrics
     digest: c1fe3a868c1e7cbcfed6fdd5b71ddf1e1ed6874bc7c171163e4f751edcc78472
@@ -1012,6 +1042,27 @@ entries:
     version: 2.5.0
   prometheus-pingmesh-exporter:
   - apiVersion: v2
+    appVersion: v1.2.2
+    created: "2024-12-25T03:25:43.89023873Z"
+    description: Prometheus Pingmesh Exporter
+    digest: a563d797952aac2b8db089e7ab8275ba006cd09c42e3ed30797c188c8eb62a1b
+    home: https://stack.kubeservice.cn/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - prometheus
+    - pingmesh
+    - monitoring
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang1989
+    name: prometheus-pingmesh-exporter
+    sources:
+    - https://github.com/kubeservice-stack/pingmesh-agent
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-pingmesh-exporter-0.4.1/prometheus-pingmesh-exporter-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
     appVersion: v1.2.1
     created: "2024-12-23T09:27:53.141493114Z"
     description: Prometheus Pingmesh Exporter
@@ -1133,6 +1184,27 @@ entries:
     - https://github.com/briceruzand/helm-charts/releases/download/prometheus-rabbitmq-exporter-1.12.1/prometheus-rabbitmq-exporter-1.12.1.tgz
     version: 1.12.1
   prometheus-redis-exporter:
+  - apiVersion: v2
+    appVersion: v1.67.0
+    created: "2024-12-25T03:25:43.973707155Z"
+    description: Prometheus exporter for Redis metrics
+    digest: fdad5c81a23d23b2be89dd30506655d879175fd0afc047ac890fe01e01f7af97
+    home: https://github.com/oliver006/redis_exporter
+    keywords:
+    - prometheus
+    - redis
+    maintainers:
+    - email: arcadie.condrat@gmail.com
+      name: acondrat
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    name: prometheus-redis-exporter
+    sources:
+    - https://github.com/oliver006/redis_exporter
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-redis-exporter-6.9.0/prometheus-redis-exporter-6.9.0.tgz
+    version: 6.9.0
   - apiVersion: v2
     appVersion: v1.66.0
     created: "2024-12-23T09:27:53.922908966Z"
@@ -1339,4 +1411,4 @@ entries:
     urls:
     - https://github.com/briceruzand/helm-charts/releases/download/prometheus-windows-exporter-0.7.1/prometheus-windows-exporter-0.7.1.tgz
     version: 0.7.1
-generated: "2024-12-24T16:32:08.793117459Z"
+generated: "2024-12-25T03:25:43.973746369Z"
