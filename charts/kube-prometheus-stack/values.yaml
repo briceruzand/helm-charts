@@ -38,6 +38,7 @@ crds:
   ## This feature is in preview, off by default and may change in the future.
   upgradeJob:
     enabled: false
+    forceConflicts: false
     image:
       busybox:
         registry: docker.io
@@ -407,6 +408,75 @@ alertmanager:
   ##
   forceDeployDashboards: false
 
+  ## Network Policy configuration
+  ##
+  networkPolicy:
+    # -- Enable network policy for Alertmanager
+    enabled: false
+
+    # -- Define policy types. If egress is enabled, both Ingress and Egress will be used
+    # Valid values are ["Ingress"] or ["Ingress", "Egress"]
+    ##
+    policyTypes:
+      - Ingress
+
+    # -- Gateway (formerly ingress controller) configuration
+    ##
+    gateway:
+      # -- Gateway namespace
+      ##
+      namespace: "ingress-nginx"
+      # -- Gateway pod labels
+      ##
+      podLabels:
+        app.kubernetes.io/name: ingress-nginx
+
+    # -- Additional custom ingress rules
+    ##
+    additionalIngress: []
+    # - from:
+    #   - namespaceSelector:
+    #       matchLabels:
+    #         name: another-namespace
+    #     podSelector:
+    #       matchLabels:
+    #         app: another-app
+
+    # -- Configure egress rules
+    ##
+    egress:
+      # -- Enable egress rules. When enabled, policyTypes will include Egress
+      ##
+      enabled: false
+      # -- Custom egress rules
+      ##
+      rules: []
+      # - to:
+      #   - namespaceSelector: {}
+      #     podSelector:
+      #       matchLabels:
+      #         name: smtp-relay
+      #   ports:
+      #   - port: 25
+      #     protocol: TCP
+
+    # -- Enable rules for alertmanager cluster traffic
+    ##
+    enableClusterRules: true
+
+    # -- Configure monitoring component rules
+    ##
+    monitoringRules:
+      # -- Enable ingress from Prometheus
+      ##
+      prometheus: true
+      # -- Enable ingress from Loki
+      ##
+      loki: true
+      # -- Enable ingress for config reloader metrics
+      ##
+      configReloader: true
+
   ## Service account for Alertmanager to use.
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
   ##
@@ -577,6 +647,11 @@ alertmanager:
       # - my-filter.example.com
       parentRefs: []
       # - name: acme-gw
+
+      # -- create http route for redirect (https://gateway-api.sigs.k8s.io/guides/http-redirect-rewrite/#http-to-https-redirects)
+      ## Take care that you only enable this on the http listener of the gateway to avoid an infinite redirect.
+      ## matches, filters and additionalRules will be ignored if this is set to true. Be are
+      httpsRedirect: false
 
       matches:
         - path:
@@ -927,7 +1002,7 @@ alertmanager:
     retention: 120h
 
     ## Storage is the definition of how storage will be used by the Alertmanager instances.
-    ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/user-guides/storage.md
+    ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/platform/storage.md
     ##
     storage: {}
     # volumeClaimTemplate:
@@ -1150,6 +1225,7 @@ grafana:
   ##
   defaultDashboardsEditable: true
 
+  adminUser: admin
   adminPassword: prom-operator
 
   rbac:
@@ -1270,6 +1346,7 @@ grafana:
       exemplarTraceIdDestinations: {}
         # datasourceUid: Jaeger
         # traceIdLabelName: trace_id
+        # urlDisplayLabel: View traces
       alertmanager:
         enabled: true
         name: Alertmanager
@@ -2278,8 +2355,18 @@ kube-state-metrics:
   rbac:
     create: true
   releaseLabel: true
+
+  ## Enable scraping via kubernetes-service-endpoints
+  ## Disabled by default as we service monitor is enabled below
+  ##
+  prometheusScrape: false
+
   prometheus:
     monitor:
+
+      ## Enable scraping via service monitor
+      ## Disable to prevent duplication if you enable prometheusScrape above
+      ##
       enabled: true
 
       ## Scrape interval. If not set, the Prometheus default scrape interval is used.
@@ -3575,10 +3662,15 @@ prometheus:
       parentRefs: []
       # - name: acme-gw
 
+      # -- create http route for redirect (https://gateway-api.sigs.k8s.io/guides/http-redirect-rewrite/#http-to-https-redirects)
+      ## Take care that you only enable this on the http listener of the gateway to avoid an infinite redirect.
+      ## matches, filters and additionalRules will be ignored if this is set to true. Be are
+      httpsRedirect: false
+
       matches:
-      - path:
-          type: PathPrefix
-          value: /
+        - path:
+            type: PathPrefix
+            value: /
 
       ## Filters define the filters that are applied to requests that match this rule.
       filters: []
@@ -3735,6 +3827,13 @@ prometheus:
     ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#monitoring.coreos.com/v1.Prometheus
     additionalArgs: []
 
+    ## File to which scrape failures are logged.
+    ## Reloading the configuration will reopen the file.
+    ## Defaults to empty (disabled)
+    ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api-reference/api.md#monitoring.coreos.com/v1.Prometheus
+    ##
+    scrapeFailureLogFile: ""
+
     ## Interval between consecutive scrapes.
     ## Defaults to 30s.
     ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/release-0.44/pkg/prometheus/promcfg.go#L180-L183
@@ -3795,7 +3894,7 @@ prometheus:
     image:
       registry: quay.io
       repository: prometheus/prometheus
-      tag: v3.1.0
+      tag: v3.2.1
       sha: ""
 
     ## Tolerations for use with node taints
@@ -4113,7 +4212,7 @@ prometheus:
     #   memory: 400Mi
 
     ## Prometheus StorageSpec for persistent data
-    ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/user-guides/storage.md
+    ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/platform/storage.md
     ##
     storageSpec: {}
     ## Using PersistentVolumeClaim
@@ -4723,6 +4822,11 @@ thanosRuler:
       parentRefs: []
       # - name: acme-gw
 
+      # -- create http route for redirect (https://gateway-api.sigs.k8s.io/guides/http-redirect-rewrite/#http-to-https-redirects)
+      ## Take care that you only enable this on the http listener of the gateway to avoid an infinite redirect.
+      ## matches, filters and additionalRules will be ignored if this is set to true. Be are
+      httpsRedirect: false
+
       matches:
         - path:
             type: PathPrefix
@@ -4917,7 +5021,7 @@ thanosRuler:
     evaluationInterval: ""
 
     ## Storage is the definition of how storage will be used by the ThanosRuler instances.
-    ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/user-guides/storage.md
+    ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/platform/storage.md
     ##
     storage: {}
     # volumeClaimTemplate:
