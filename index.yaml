@@ -4071,6 +4071,33 @@ entries:
     version: 0.4.0
   prometheus-postgres-exporter:
   - apiVersion: v2
+    appVersion: v0.17.1
+    created: "2025-04-21T21:25:43.608815336Z"
+    description: A Helm chart for prometheus postgres-exporter
+    digest: f4a860745a837eb05e85b8f7e3673fe672b899141a6114f523047d4c8d7eced1
+    home: https://github.com/prometheus-community/postgres_exporter
+    keywords:
+    - postgresql
+    - prometheus
+    - exporter
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+      url: https://github.com/gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+      url: https://github.com/zanhsieh
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+      url: https://github.com/zeritti
+    name: prometheus-postgres-exporter
+    sources:
+    - https://github.com/prometheus-community/postgres_exporter
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-postgres-exporter-6.10.2/prometheus-postgres-exporter-6.10.2.tgz
+    version: 6.10.2
+  - apiVersion: v2
     appVersion: v0.17.0
     created: "2025-04-21T15:25:49.637508496Z"
     description: A Helm chart for prometheus postgres-exporter
@@ -4173,6 +4200,37 @@ entries:
     - https://github.com/briceruzand/helm-charts/releases/download/prometheus-postgres-exporter-6.8.0/prometheus-postgres-exporter-6.8.0.tgz
     version: 6.8.0
   prometheus-pushgateway:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+    apiVersion: v2
+    appVersion: v1.11.0
+    created: "2025-04-21T21:25:43.71353936Z"
+    description: A Helm chart for prometheus pushgateway
+    digest: a6d4119005046295a6874629931173bb99b1a3a76e255fa5364084104d2b5aad
+    home: https://github.com/prometheus/pushgateway
+    keywords:
+    - pushgateway
+    - prometheus
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+      url: https://github.com/gianrubio
+    - email: christian.staude@staffbase.com
+      name: cstaud
+      url: https://github.com/cstaud
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+      url: https://github.com/zeritti
+    name: prometheus-pushgateway
+    sources:
+    - https://github.com/prometheus/pushgateway
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-pushgateway-3.1.1/prometheus-pushgateway-3.1.1.tgz
+    version: 3.1.1
   - annotations:
       artifacthub.io/license: Apache-2.0
       artifacthub.io/links: |
@@ -4972,4 +5030,4 @@ entries:
     urls:
     - https://github.com/briceruzand/helm-charts/releases/download/yet-another-cloudwatch-exporter-0.39.1/yet-another-cloudwatch-exporter-0.39.1.tgz
     version: 0.39.1
-generated: "2025-04-21T15:25:49.637752103Z"
+generated: "2025-04-21T21:25:43.713703719Z"
