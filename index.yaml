@@ -4605,6 +4605,37 @@ entries:
           url: https://github.com/prometheus-community/helm-charts
     apiVersion: v2
     appVersion: v1.11.1
+    created: "2025-04-28T15:25:46.245856719Z"
+    description: A Helm chart for prometheus pushgateway
+    digest: 593e7a98a978a7f8e97d7b932dddc593e832863370b4038cecdb478dbeac9e19
+    home: https://github.com/prometheus/pushgateway
+    keywords:
+    - pushgateway
+    - prometheus
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+      url: https://github.com/gianrubio
+    - email: christian.staude@staffbase.com
+      name: cstaud
+      url: https://github.com/cstaud
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+      url: https://github.com/zeritti
+    name: prometheus-pushgateway
+    sources:
+    - https://github.com/prometheus/pushgateway
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-pushgateway-3.1.3/prometheus-pushgateway-3.1.3.tgz
+    version: 3.1.3
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+    apiVersion: v2
+    appVersion: v1.11.1
     created: "2025-04-22T21:25:46.890298487Z"
     description: A Helm chart for prometheus pushgateway
     digest: 005793e2373cfdffacc1f5da43c10715b6b42559903e8f1dbd483ba83665d564
@@ -4958,6 +4989,25 @@ entries:
     - https://github.com/briceruzand/helm-charts/releases/download/prometheus-redis-exporter-6.8.0/prometheus-redis-exporter-6.8.0.tgz
     version: 6.8.0
   prometheus-smartctl-exporter:
+  - apiVersion: v2
+    appVersion: v0.14.0
+    created: "2025-04-28T15:25:46.372485022Z"
+    description: A Helm chart for Kubernetes
+    digest: 9746527292e4cc8a181e2cb902606729d2c7c2441db84bcf7a7f15368168fac4
+    home: https://github.com/prometheus-community/smartctl_exporter
+    maintainers:
+    - name: kfox1111
+      url: https://github.com/kfox1111
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+      url: https://github.com/zeritti
+    name: prometheus-smartctl-exporter
+    sources:
+    - https://github.com/prometheus-community/smartctl_exporter
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-smartctl-exporter-0.15.1/prometheus-smartctl-exporter-0.15.1.tgz
+    version: 0.15.1
   - apiVersion: v2
     appVersion: v0.15.0
     created: "2025-04-27T21:26:08.112457189Z"
@@ -5520,4 +5570,4 @@ entries:
     urls:
     - https://github.com/briceruzand/helm-charts/releases/download/yet-another-cloudwatch-exporter-0.39.1/yet-another-cloudwatch-exporter-0.39.1.tgz
     version: 0.39.1
-generated: "2025-04-27T21:26:08.112714557Z"
+generated: "2025-04-28T15:25:46.372708599Z"
