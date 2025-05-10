@@ -3998,6 +3998,38 @@ entries:
   prometheus-blackbox-exporter:
   - apiVersion: v2
     appVersion: v0.26.0
+    created: "2025-05-10T03:25:40.559548004Z"
+    description: Prometheus Blackbox Exporter
+    digest: f203af1e95d10b6f8eab4c7b4d1c17a08516d6670d25f94361bdfde496a02ebb
+    home: https://github.com/prometheus/blackbox_exporter
+    keywords:
+    - prometheus
+    - blackbox
+    - monitoring
+    kubeVersion: '>=1.21.0-0'
+    maintainers:
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+      url: https://github.com/desaintmartin
+    - email: gianrubio@gmail.com
+      name: gianrubio
+      url: https://github.com/gianrubio
+    - email: me@sota.sh
+      name: rsotnychenko
+      url: https://github.com/rsotnychenko
+    - email: monotek23@gmail.com
+      name: monotek
+      url: https://github.com/monotek
+    name: prometheus-blackbox-exporter
+    sources:
+    - https://github.com/prometheus/blackbox_exporter
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-blackbox-exporter
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-blackbox-exporter-9.6.0/prometheus-blackbox-exporter-9.6.0.tgz
+    version: 9.6.0
+  - apiVersion: v2
+    appVersion: v0.26.0
     created: "2025-04-27T15:25:51.61434039Z"
     description: Prometheus Blackbox Exporter
     digest: eb397c5574b46d14ffb39b079ce144087917e8157976be8e517fed39cab5d713
@@ -7082,4 +7114,4 @@ entries:
     urls:
     - https://github.com/briceruzand/helm-charts/releases/download/yet-another-cloudwatch-exporter-0.39.1/yet-another-cloudwatch-exporter-0.39.1.tgz
     version: 0.39.1
-generated: "2025-05-09T21:26:03.576261791Z"
+generated: "2025-05-10T03:25:40.559741765Z"
