@@ -6008,6 +6008,28 @@ entries:
   prometheus-pingmesh-exporter:
   - apiVersion: v2
     appVersion: v1.2.2
+    created: "2025-05-12T09:25:49.86623164Z"
+    description: Prometheus Pingmesh Exporter
+    digest: feef88fc0e189d90c083b488bad8301511fa2f18ed9e3bc44bf3cb07abe6cea0
+    home: https://stack.kubeservice.cn/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - prometheus
+    - pingmesh
+    - monitoring
+    maintainers:
+    - email: dongjiang1989@126.com
+      name: dongjiang1989
+      url: https://github.com/dongjiang1989
+    name: prometheus-pingmesh-exporter
+    sources:
+    - https://github.com/kubeservice-stack/pingmesh-agent
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-pingmesh-exporter-0.4.2/prometheus-pingmesh-exporter-0.4.2.tgz
+    version: 0.4.2
+  - apiVersion: v2
+    appVersion: v1.2.2
     created: "2024-12-25T03:25:43.89023873Z"
     description: Prometheus Pingmesh Exporter
     digest: a563d797952aac2b8db089e7ab8275ba006cd09c42e3ed30797c188c8eb62a1b
@@ -7127,6 +7149,33 @@ entries:
   prometheus-yet-another-cloudwatch-exporter:
   - apiVersion: v2
     appVersion: v0.62.1
+    created: "2025-05-12T09:25:50.061011914Z"
+    description: Yace - Yet Another CloudWatch Exporter
+    digest: cc03de665e5ff6ea5a5be731cfeeb4d29f4300ce7e72d8c2774fb353c1a8f672
+    home: https://github.com/prometheus-community/helm-charts
+    keywords:
+    - aws
+    - cloudwatch
+    - prometheus
+    - exporter
+    - yet-another-cloudwatch-exporter
+    - yace
+    maintainers:
+    - email: cristian.greco@grafana.com
+      name: cristiangreco
+      url: https://github.com/cristiangreco
+    - email: info@thomas-peitz.de
+      name: thomaspeitz
+      url: https://github.com/thomaspeitz
+    name: prometheus-yet-another-cloudwatch-exporter
+    sources:
+    - https://github.com/prometheus-community/yet-another-cloudwatch-exporter
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-yet-another-cloudwatch-exporter-0.40.1/prometheus-yet-another-cloudwatch-exporter-0.40.1.tgz
+    version: 0.40.1
+  - apiVersion: v2
+    appVersion: v0.62.1
     created: "2025-04-16T03:27:35.470992157Z"
     description: Yace - Yet Another CloudWatch Exporter
     digest: 79d4e4f40e2604aa52efeadba722dad9c959ea6941dea01351ea1f6b55ec07f2
@@ -7228,4 +7277,4 @@ entries:
     urls:
     - https://github.com/briceruzand/helm-charts/releases/download/yet-another-cloudwatch-exporter-0.39.1/yet-another-cloudwatch-exporter-0.39.1.tgz
     version: 0.39.1
-generated: "2025-05-10T21:25:55.161578401Z"
+generated: "2025-05-12T09:25:50.06132941Z"
