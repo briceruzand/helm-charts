@@ -3900,6 +3900,25 @@ entries:
   prom-label-proxy:
   - apiVersion: v2
     appVersion: v0.11.0
+    created: "2025-05-22T21:25:46.90306083Z"
+    description: A proxy that enforces a given label in a given PromQL query.
+    digest: 89cbcbbd08543ff1614d6d2f4cac80106152fd0faccef319ac597c41f4804b15
+    home: https://github.com/prometheus-community/prom-label-proxy
+    keywords:
+    - metric
+    - monitoring
+    - prometheus
+    maintainers:
+    - email: github@jkroepke.de
+      name: Jan-Otto Kröpke
+      url: https://github.com/jkroepke
+    name: prom-label-proxy
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prom-label-proxy-0.12.1/prom-label-proxy-0.12.1.tgz
+    version: 0.12.1
+  - apiVersion: v2
+    appVersion: v0.11.0
     created: "2025-05-02T15:26:03.784298882Z"
     description: A proxy that enforces a given label in a given PromQL query.
     digest: 11118e36f675c42b4b12bc3dc94c2d073493644be81c67e6904cb0f1b5a0f4c7
@@ -8006,6 +8025,28 @@ entries:
   prometheus-windows-exporter:
   - apiVersion: v2
     appVersion: 0.30.6
+    created: "2025-05-22T21:25:47.104579539Z"
+    description: A Helm chart for prometheus windows-exporter
+    digest: 578f7426737147faa41e298994180d4a9a440f40092ebc86a377b1d7f0331b1a
+    home: https://github.com/prometheus-community/windows_exporter/
+    keywords:
+    - windows-exporter
+    - windows
+    - prometheus
+    - exporter
+    maintainers:
+    - email: github@jkroepke.de
+      name: Jan-Otto Kröpke
+      url: https://github.com/jkroepke
+    name: prometheus-windows-exporter
+    sources:
+    - https://github.com/prometheus-community/windows_exporter/
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-windows-exporter-0.10.1/prometheus-windows-exporter-0.10.1.tgz
+    version: 0.10.1
+  - apiVersion: v2
+    appVersion: 0.30.6
     created: "2025-04-17T15:26:04.077109935Z"
     description: A Helm chart for prometheus windows-exporter
     digest: fcc03841319f01a4f8d3ab87bc118a41500db2a2938ea9f6f818a94a60311a85
@@ -8221,4 +8262,4 @@ entries:
     urls:
     - https://github.com/briceruzand/helm-charts/releases/download/yet-another-cloudwatch-exporter-0.39.1/yet-another-cloudwatch-exporter-0.39.1.tgz
     version: 0.39.1
-generated: "2025-05-22T15:26:07.102840287Z"
+generated: "2025-05-22T21:25:47.10489015Z"
