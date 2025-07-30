@@ -8118,6 +8118,34 @@ entries:
   prometheus-elasticsearch-exporter:
   - apiVersion: v2
     appVersion: v1.9.0
+    created: "2025-07-30T09:25:57.094534628Z"
+    description: Elasticsearch stats exporter for Prometheus
+    digest: e20890f54d3ab054b5eb159ee190b7af8b2734dd5ee65be515e1d21c10a42956
+    home: https://github.com/prometheus-community/elasticsearch_exporter
+    keywords:
+    - metrics
+    - elasticsearch
+    - monitoring
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: sven.mueller@commercetools.com
+      name: svenmueller
+      url: https://github.com/svenmueller
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+      url: https://github.com/desaintmartin
+    - email: rootsandtrees@posteo.de
+      name: zeritti
+      url: https://github.com/zeritti
+    name: prometheus-elasticsearch-exporter
+    sources:
+    - https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-elasticsearch-exporter
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-elasticsearch-exporter-7.0.0/prometheus-elasticsearch-exporter-7.0.0.tgz
+    version: 7.0.0
+  - apiVersion: v2
+    appVersion: v1.9.0
     created: "2025-07-19T19:02:16.131725664Z"
     description: Elasticsearch stats exporter for Prometheus
     digest: 8e9d667db2fa2490dcf35eb3f361dded52b44898cddc5e6afee49b56225421f7
@@ -13139,4 +13167,4 @@ entries:
     urls:
     - https://github.com/briceruzand/helm-charts/releases/download/yet-another-cloudwatch-exporter-0.39.1/yet-another-cloudwatch-exporter-0.39.1.tgz
     version: 0.39.1
-generated: "2025-07-29T15:25:55.926462082Z"
+generated: "2025-07-30T09:25:57.09494507Z"
