@@ -8399,6 +8399,25 @@ entries:
     version: 0.5.0
   prometheus-ipmi-exporter:
   - apiVersion: v2
+    appVersion: v1.10.1
+    created: "2025-07-30T21:25:50.872042794Z"
+    description: This is an IPMI exporter for Prometheus.
+    digest: a66f2456b60f323f92e2c17ae4177e563208fa8aa7ac75800dcdb3ce84143591
+    home: https://github.com/prometheus-community/ipmi_exporter
+    keywords:
+    - metrics
+    - ipmi
+    - monitoring
+    maintainers:
+    - email: f@lex.la
+      name: lexfrei
+      url: https://github.com/lexfrei
+    name: prometheus-ipmi-exporter
+    type: application
+    urls:
+    - https://github.com/briceruzand/helm-charts/releases/download/prometheus-ipmi-exporter-0.6.2/prometheus-ipmi-exporter-0.6.2.tgz
+    version: 0.6.2
+  - apiVersion: v2
     appVersion: v1.10.0
     created: "2025-04-16T03:27:31.765174295Z"
     description: This is an IPMI exporter for Prometheus.
@@ -13190,4 +13209,4 @@ entries:
     urls:
     - https://github.com/briceruzand/helm-charts/releases/download/yet-another-cloudwatch-exporter-0.39.1/yet-another-cloudwatch-exporter-0.39.1.tgz
     version: 0.39.1
-generated: "2025-07-30T15:25:51.157513058Z"
+generated: "2025-07-30T21:25:50.872510857Z"
